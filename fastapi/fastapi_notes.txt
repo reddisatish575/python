@@ -1,0 +1,95 @@
+1. A super fast web framewrok, it is ver modern framework
+2. It has asynchronus programming.
+3. It has automatic documentation (Swagger UI & ReDoc)
+4. It uses python >3.6 and uses pydantic library (statically typed).
+5. It follows json schema and follows Open API rules .
+6. It has security and authentication
+	-> HTTP Basic
+	-> OAuth2 (also with JWT Tokens)
+	-> API keys in headers, QueryParameters, Cookies etc.,
+7. We have DI and unlimited plug-ins
+7. It has Stalette Features
+	-> WebSocket support
+	-> GraphQl support
+	-> In-Process background tasks
+	-> Startup and shutdown events
+	-> Test client built on requests
+	-> CORS, GZip, Static Files, Streaming responses
+	-> Session and Cookie support
+8. DB supports
+	-> SQL Databases, NoSql DB, graphQL also
+9. Basic Concepts
+	-> Path Parameters
+	-> API Docs - Swagger/redocs
+	-> Query Parameters
+	-> Request body
+10. Intermediate Concepts
+	-> Debugging FastAPI
+	-> Pydantic schemas
+	-> SqlAlchemy DB connection
+	-> Models and tables
+11. Database tasks
+	-> get, post, put, delete
+12. Responses
+	-> Handling Exceptions
+	-> Return response
+	-> Define response model
+13. User and Password
+	-> Create user
+	-> Hash user password
+	-> show single user
+	-> deined doc tags
+14. Relationship
+	-> Define user to blog relationship
+	-> define blog to user relationship
+15. Refacot for bigger application
+	-> API Router
+	-> API Router with parameters
+16. Authentication using JWT(Json web token)
+	-> create login route
+	-> login and verify password
+	-> return JWT access token
+	-> Routes behind authentication
+16. deploy FastApi
+	-> using deta.sh website to deploy
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

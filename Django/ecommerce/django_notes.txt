@@ -1,0 +1,64 @@
+1. Django floows MVT Architecture
+	-> User login to the webPage enters some address in search bar and when he click the enter button, the request will be forward
+		to the view (preparation layer)
+	-> if there is any data request to the URL then view will request the data from the model(database layer) and get the data
+	-> After that the dynamic data should be send from view to the template(Presentation layer) to show the data.
+	-> if the view wants static data then there is no need of going to the model, we can directly show in the template from the view
+	-> view is nothing but a function. when we need dynamic data then only calls the model
+
+2. Core components
+	1. Models (database layer)
+		-> Represent the data schema of the application
+		-> define the structure of the data including fields and thier types
+		-> django ORM automatically handles database interactions
+	2. Templates (presentation layer)
+		-> Control how data is presented to the user
+		-> using django template language to create html files with dynamic content
+	3. Views (preparation layer)
+		-> handles the logic of your application
+		-> process user requests, interact with models and return responses to the user
+		-> if the user authenticated then it redirects to the dashboard otherwise it redirects to the login page
+		-> we have two different views
+			-> class based views
+			-> function based views
+	4. urls
+		-> URL dispatcher maps urls to views
+		-> allows for clean and readable urls
+		-> to manage the all urls we will use urls.py file
+
+3. basic workflow
+	1. create a project
+		-> use `django-admin startproject <project_name>` to setup a new project
+	2. create an app
+		-> use `python manage.py startapp <app_name>` to add a new application to the project
+	3. define models
+		-> create models in `models.py` for db structure
+	4. create view
+		-> define views in `view.py` to handle requests
+	5. configure urls
+		-> map urls to view in `urls.py`
+	6. create templates
+		-> develop html templates for the front-end in the `templates` directory
+	7. admin configuration
+		-> register models with the admin interface in `admin.py`
+
+4. key commands
+	-> `python manage.py runserver <port_number>` : start the development server
+	-> `python manage.py makemigrations` : create a new migrations based on model changes
+	-> `python manage.py migrate` : apply migrations to the database
+	-> `python manage.py createsuperuser` : create a superuser account for the admin interface
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
