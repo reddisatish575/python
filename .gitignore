@@ -1,0 +1,59 @@
+# macOS system files
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Python cache
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.pkl
+
+# Jupyter Notebook checkpoints
+.ipynb_checkpoints/
+
+# Virtual environments
+.env
+.venv
+env/
+venv/
+ENV/
+
+# Logs
+*.log
+
+# IDE / Editor settings
+.vscode/
+.idea/
+*.swp
+# macOS system files
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Python cache
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.pkl
+
+# Jupyter Notebook checkpoints
+.ipynb_checkpoints/
+
+# Virtual environments
+.env
+.venv
+env/
+venv/
+ENV/
+
+# Logs
+*.log
+
+# IDE / Editor settings
+.vscode/
+.idea/
+*.swp
+
