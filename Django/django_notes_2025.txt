@@ -1,0 +1,214 @@
+what is django ?
+--------------------------
+-> django is open source and most popular python fw that is used to develop a fast, scalable and secure web applications
+-> fw is collection of sw modules and tools to reduce the developing time
+-> django provides registena and login functionality by default
+-> we need to store the passwords in encrypted formates, it will automatically stores the passwordds
+	 in PBKDF2 algorithm(password based key derivation function 2) with SHA 256 hashing technique to store the passwords.
+-> django comes with default admin panel, we can do almost all types of crud operations without coding
+-> highly scalable
+
+why use django ?
+------------------
+-> clear, simple, reliable, fast, secure, flexible,scalable
+-> huge community support and contribuntion
+-> youtube, instagram, 
+-> built in user admin panel, fully featured web interface automatcally generated
+-> we can do easily do crud operations on admin panel
+-> django follows DRY principle (don't repeat yourself) principle.  
+
+commands to learn
+------------------
+1. python3 --version
+2. pip3 --version
+3. python3 -m venv env
+4. pip3 install django
+5. python3 -m pip freeze
+6. django-admin startproject mysite .
+	-> used to create django project where last dot will tell to create 
+		django project at root level.
+7. python3 manage.py runserver
+	-> run the project
+8. python3 manage.py startapp employees
+	-> used to create new app
+9. python3 manage.py migrate 
+	-> used to create all the required default tables in admin panel
+10. python3 manage.py createsuperuser
+	-> used to create super user for login to the admin panel
+
+django project structure
+--------------------------
+1. mysite is project directory
+2. manage.py
+	-> it is command line utility in django projects
+	-> t serves as the primary interface for interacting with your Django project and performing various administrative tasks
+	-> never edit this file until you are expert
+	-> we can use this file to execute so many commands
+3. mysite
+	1. __init__.py
+		-> we can ignore this file, it is empty file while creating project
+		-> before we get to know about the purpose of the file, we should know about python packages
+		-> package is collection of modules(functions, classes, variables)
+		-> Don't delete this file, if we delete , we can't import modules/functions from one package to another package
+		-> importing functionality will be easy with this file
+	2. wsgi.py
+		-> it stands for web server gatewat interface.
+		-> it is used for deploying our application in production server(apache or nginx).
+		-> it can be thought of as a specification how servers should interact with web applications
+	3. asgi.py
+		-> it is similar with wsgi.py, it has extra functionalities
+		-> it is stands for asynchronous server gateway interface
+	4. urls.py
+		-> universal resource locater
+		-> it can contain end points of webpages, images etc.,
+	5. settings.py
+		-> it is most important file in django project
+		-> it will add the all the configurations for our django project
+		-> it will come with some basic settings
+		1. BASE_DIR
+			-> it will get the root directory dynamically
+			-> project name
+		2. SECRET_KEY
+			-> secret key used to generates the hashes for encrypt the data
+			-> it should
+		3. DEBUG
+			-> it is set as true in development server
+			-> in production it will be false
+			-> we don't want to show any warning or errors or sample code or urls to the viewers 
+		4. ALLOWED_HOSTS
+			-> used to allow the devices addresses
+		5. INSTALLED_APPS
+			-> we should register the apps in this list
+		6. MIDDLEWARE
+		7. ROOT_URLCONF
+			-> it will show urls.py path from the root folder
+		8. TEMPLATES
+			-> this configuration used to rendering the frontend templates
+			-> we will add folder of bundle html templates in the DIR folder
+		9. WSGI_APPLICATION
+			-> it have server configuration
+		10. DATABASES
+			-> it have db connections
+		11. AUTH_PASSWORD_VALIDATORS
+			-> builtin password validators, used to check the strength of the passwords
+		12. STATIC_URL
+			-> image files, css files, js files are static files
+		13. DEFAULT_AUTO_FIELD
+			-> primary key
+
+
+How Django Works ?
+-------------------
+-> Django follows MVT Design Pattern
+-> Model View Template
+-> the design patterns are the way of defining the rules of developing software applications.
+-> Model 
+	-> it is reponsible for each and every DB operations
+	-> it will be in server side
+	-> Interact with DB
+	-> model is the bridge between view and DB
+-> Template
+	-> seen by the users
+-> View
+	-> acts as bridge between modela and template
+	-> recieves a request and returns a response
+Example:
+-> Let rohit requested to check his profile , now url pattern will come to urls.py and 
+	in that it will match the requested url in path tuple and execure the corresponding views.method
+-> the method will have logic to get the profile details from the DB, view itself cannot connect to the DB directly,
+	so it will contact the model, the model will have db related logic
+-> the model will give the data to the view and then view will give the data to the template which is seen by user.
+
+
+URLs and HTTP Responses
+-----------------------
+
+BOOTSTRAP INTEGRATION
+---------------------
+
+
+DJANGO STATIC FILES
+-------------------
+-> if we have multiple folders in that static folder, we have one command called 'collectStatic', it will collect all the folders and place in the static_root. it mainly used in while deployment.
+
+DJANGO APPS
+-----------
+-> it is python package specifically meant for using in a django project
+-> python3 manage.py startapp employees
+	-> used to create new app
+-> In django project we will have multiple apps
+-> app directory structure
+	1. __init__.py
+		-> if we see this, it means it is not simple folder, it is python packaage
+		-> don't delete this file
+	2. admin.py
+		-> used to display the models in the django admin panel
+		-> we can customize this
+	3. apps.py
+		-> this file is created to help the user to add application leve config
+		-> you should have entire django idea then only , you can edit this file
+	4. models.py
+		-> contains essentials fields and behaviours of the data that storing in the db.
+		-> we will create DB tables and class by writing the models in this file.
+	5. tests.py
+		-> used to run any test in the project
+	6. views.py
+		-> we will write our bussiness logic in this file
+
+DJANGO ADMIN PANEL
+------------------
+-> to access the admin panel, we need to create a superuser by stopping the server and running the command
+	'python3 manage.py createsuperuser'
+
+DJANGO MODEL
+------------
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
